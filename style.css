@@ -270,10 +270,11 @@ iframe{
         font-size: 160%;
     }
 
-    .social a {
-        font-size: 2rem;
-        padding:.7rem;
-    }
+    iframe {
+        max-width: 100%;
+  
+      }
+      
 }
 
 

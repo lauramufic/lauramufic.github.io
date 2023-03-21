@@ -40,7 +40,7 @@
 <li class="nav-item">
     <li class="nav-item">
 <a class="nav-link" href="spring.html">SPRING COLLECTION</a></li>
-    <a class="nav-link" href="#"><i class="fa fa-shopping-basket"></i></a>
+    <a class="nav-link"><i class="fa fa-shopping-basket"></i></a>
   </li>
 </ul>
 </div>
@@ -137,6 +137,7 @@
 <!---Video-->
 
     <h2 style="margin-top: 40px; text-align: center;">Pogledaj naš promo video!</h2>
+    <h5 style="margin-bottom: 40px; text-align: center;">Za više videozapisa pretplati se na naš <a href="https://www.youtube.com/@BoldBrand19"> youtube kanal</a></h5>
       <iframe src="promovideo.mp4" frameborder="0" allow="autoplay;
       encrypted-media" allowfullscreen></iframe>
     </video>
@@ -150,9 +151,9 @@
           <h2>Poveži se</h2>
     </div>
 <div class="col-12 social padding">
-<a href="#"><i class="fab fa-facebook"></i></a>
-    <a href="#"><i class="fab fa-instagram"></i></a>
-        <a href="#"><i class="fab fa-twitter"></i></a>
+<a href="https://hr-hr.facebook.com/"><i class="fab fa-facebook"></i></a>
+    <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
+        <a href="https://twitter.com/"><i class="fab fa-twitter"></i></a>
     </div>
 </div>
 
@@ -164,13 +165,15 @@
 <section id="newsletter" class="section-p1 section-m1" style="padding: 40px;">
     <div class="newstext">
         <h4>Prijavi se na newsletter</h4>
-        <p>Primajte novosti o našim najnovojim kolekcijama i <span>posebnim ponudama</span> </p>
+        <p>Primajte novosti o našim najnovojim kolekcijama i <span>posebnim ponudama</span></p>
     </div>
     <div class="form">
-        <input type="text" placeholder="Vaša e-mail adresa">
-        <button class="normal">Prijavi se</button>
+        <input type="text" placeholder="Vaša e-mail adresa" id="newsletter-email">
+        <button class="normal" onclick="submitForm()">Prijavi se</button>
     </div>
+    <p id="newsletter-success" style="display: none;">Hvala na prijavi!</p>
 </section>
+
 
 <!--Podnozje-->
 
@@ -217,5 +220,15 @@
     </div>
         
 </footer>
+
+<script>
+    function submitForm() {
+        const email = document.getElementById('newsletter-email').value;
+
+        document.getElementById('newsletter-success').style.display = 'block';
+        document.getElementById('newsletter-email').value = '';
+    }
+</script>
+
     </body>
 </html>
